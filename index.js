@@ -5,6 +5,7 @@ require("dotenv").config();
 const { isDevelopment } = require("./utils/helpers");
 const lightsRouter = require("./routes/lights");
 // const presenceRouter = require("./routes/presence");
+const switchesRouter = require("./routes/switches");
 // const temperatureRouter = require("./routes/temperature");
 const tvRouter = require("./routes/tv");
 
@@ -35,6 +36,7 @@ app.use(express.json());
 // Routes
 app.use("/api/lights", lightsRouter);
 // app.use("/api/presence", presenceRouter);
+app.use("/api/switches", switchesRouter);
 // app.use("/api/temperature", temperatureRouter);
 app.use("/api/tv", tvRouter);
 
