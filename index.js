@@ -3,6 +3,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const { isDevelopment } = require("./utils/helpers");
+const tvRouter = require("./routes/tv");
 
 // Environment variables
 const clientProdServer = process.env.PROD_FRONTEND_SERVER || "";
@@ -27,6 +28,9 @@ app.use((req, res, next) => {
 });
 app.use(cookieParser());
 app.use(express.json());
+
+// Routes
+app.use("/api/tv", tvRouter);
 
 // Error handling
 app.use((err, req, res, next) => {
