@@ -3,6 +3,9 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const { isDevelopment } = require("./utils/helpers");
+const lightsRouter = require("./routes/lights");
+// const presenceRouter = require("./routes/presence");
+// const temperatureRouter = require("./routes/temperature");
 const tvRouter = require("./routes/tv");
 
 // Environment variables
@@ -30,6 +33,9 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
+app.use("/api/lights", lightsRouter);
+// app.use("/api/presence", presenceRouter);
+// app.use("/api/temperature", temperatureRouter);
 app.use("/api/tv", tvRouter);
 
 // Error handling

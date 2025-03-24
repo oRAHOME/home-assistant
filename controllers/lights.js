@@ -1,6 +1,6 @@
 const { apiClient } = require("../utils/helpers");
 
-const controlTv = async (req, res) => {
+const controlLights = async (req, res) => {
   const { action, deviceName } = req.body;
 
   if (!action || !deviceName) {
@@ -19,22 +19,13 @@ const controlTv = async (req, res) => {
     case "off":
       service = "turn_off";
       break;
-    case "play":
-      service = "play_media";
-      break;
-    case "pause":
-      service = "media_pause";
-      break;
-    case "stop":
-      service = "media_stop";
-      break;
     default:
       return res.status(400).json({ success: false, error: "Invalid action." });
   }
 
   try {
-    const response = await apiClient.post(`services/media_player/${service}`, {
-      entity_id: `media_player.${deviceName}`,
+    const response = await apiClient.post(`services/light/${service}`, {
+      entity_id: `light.${deviceName}`,
     });
 
     if (response.status !== 200) {
@@ -44,7 +35,7 @@ const controlTv = async (req, res) => {
         .json({ success: false, error: response.data });
     }
 
-    console.log(`TV ${deviceName}: '${action}' command sent successfully.`);
+    console.log(`Light ${deviceName}: '${action}' command sent successfully.`);
     res.status(200).json({ success: true, data: response.data });
   } catch (error) {
     console.error(`Error: ${error.message}`);
@@ -52,4 +43,4 @@ const controlTv = async (req, res) => {
   }
 };
 
-module.exports = { controlTv };
+module.exports = { controlLights };
