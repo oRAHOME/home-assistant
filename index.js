@@ -2,11 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
+const { isDevelopment } = require("./utils/helpers");
 
 // Environment variables
 const clientProdServer = process.env.PROD_FRONTEND_SERVER || "";
 const clientDevServer = process.env.DEV_FRONTEND_SERVER || "";
-const isDevelopment = () => process.env.NODE_ENV === "development";
 const app = express();
 
 // Middleware
