@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { toggleTv } = require("../controllers/tv");
+const { controlTv } = require("../controllers/tv");
 
 // POST: /api/tv/control
-router.post("/control", toggleTv);
+router.post("/control", controlTv);
 
 module.exports = router;

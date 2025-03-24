@@ -1,6 +1,6 @@
 const { apiClient } = require("../utils/helpers");
 
-const toggleTv = async (req, res) => {
+const controlTv = async (req, res) => {
   const { action, deviceName } = req.body;
 
   if (!action || !deviceName) {
@@ -52,4 +52,4 @@ const toggleTv = async (req, res) => {
   }
 };
 
-module.exports = { toggleTv };
+module.exports = { controlTv };
