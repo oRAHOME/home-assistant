@@ -2,19 +2,29 @@
 
 ## Setup Instructions
 
-1. Install Node.js v16 or later.
+1. Install Node.js
 2. Clone this repository and navigate to the project directory:
+   ```bash
    cd ./home-assistant
+   ```
 3. Install the dependencies:
+   ```bash
    npm install
-5. Start the server in development mode:
+   ```
+4. Start the server in development mode:
+   ```bash
    npm run dev
-6. Or start the server in production mode:
+   ```
+5. Or start the server in production mode:
+   ```bash
    npm start
-7. Or run tests with:
+   ```
+6. Or run tests with:
+   ```bash
    npm test
-8. The server will run on:
-   http://localhost:8080
+   ```
+7. The server will run on:
+   `http://localhost:8080`
 
 ---
 
