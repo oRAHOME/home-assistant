@@ -9,11 +9,11 @@
    npm install
 5. Start the server in development mode:
    npm run dev
-
 6. Or start the server in production mode:
    npm start
-
-7. The server will run on:
+7. Or run tests with:
+   npm test
+8. The server will run on:
    http://localhost:8080
 
 ---
@@ -28,14 +28,6 @@ PORT=8080
 HA_API_URL=http://YOUR_HOME_ASSISTANT_IP:8123/api/
 HA_ACCESS_TOKEN=YOUR_LONG_LIVED_ACCESS_TOKEN
 ```
----
-
-## Available Scripts
-
-npm run dev    # Start server with development environment
-npm start      # Start server in production
-npm test       # Run tests with Jest and generate coverage report
-
 ---
 
 ## API Routes
