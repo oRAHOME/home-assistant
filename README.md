@@ -53,6 +53,7 @@ Routes for presence and temperature are scaffolded but currently disabled.
 The project uses Jest for testing.
 
 Run all tests:
+```bash
 npm test
-
+```
 ---
