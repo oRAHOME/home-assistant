@@ -7,17 +7,15 @@
    cd ./home-assistant
 3. Install the dependencies:
    npm install
-4. Create a .env file in the root of the project with the following content:
-
-   # Server Configuration
+4. Ensure you set up the following environment variables in a .env file:
+plaintext
    DEV_FRONTEND_SERVER=http://localhost:3000
    PROD_FRONTEND_SERVER=
    PORT=8080
 
-   # Home Assistant API
    HA_API_URL=http://YOUR_HOME_ASSISTANT_IP:8123/api/
    HA_ACCESS_TOKEN=YOUR_LONG_LIVED_ACCESS_TOKEN
-
+---
 5. Start the server in development mode:
    npm run dev
 
