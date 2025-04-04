@@ -19,11 +19,7 @@
    ```bash
    npm start
    ```
-6. Or run tests with:
-   ```bash
-   npm test
-   ```
-7. The server will run on:
+6. The server will run on:
    `http://localhost:8080`
 
 ---
@@ -49,5 +45,14 @@ Base route prefix: /api
 - POST /api/tv/control – Control TV (basic route in place)
 
 Routes for presence and temperature are scaffolded but currently disabled.
+
+---
+
+## Testing
+
+The project uses Jest for testing.
+
+Run all tests:
+npm test
 
 ---
