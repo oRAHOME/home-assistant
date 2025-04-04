@@ -22,11 +22,11 @@
 Ensure you set up the following environment variables in a `.env` file:
 
 ```plaintext
-ACCESS_TOKEN_SECRET=your-secret-key
-REFRESH_TOKEN_SECRET=your-refresh-secret-key
-GOOGLE_CLIENT_ID=your-client-id
-GOOGLE_CLIENT_SECRET=your-client-secret
-DATABASE_URL=your-postgres-db
+DEV_FRONTEND_SERVER=http://localhost:3000
+PROD_FRONTEND_SERVER=
+PORT=8080
+HA_API_URL=http://YOUR_HOME_ASSISTANT_IP:8123/api/
+HA_ACCESS_TOKEN=YOUR_LONG_LIVED_ACCESS_TOKEN
 ```
 ---
 
